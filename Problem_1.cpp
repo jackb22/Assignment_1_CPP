@@ -1,3 +1,46 @@
+/*
+ * Title: Problem_1.cpp
+ * Date: January 4th, 2023
+ * Author: Jack Bennett
+ * Version: 1.0
+ */
+
+/* Documentation
+ *
+ * Program Purpose: Generate a multiplication table that goes from 1x to 12x.
+ *
+ * Classes: None
+ *
+ * Notes: n/a
+ *
+ * Variables:
+ * i: int i used as a loop counter to represent the rows of the multiplication table.
+ *
+ * j: int j used as a loop counter to represent columns of the multiplication table.
+ *
+ * num: int stores the current value of i during the generation of the multiplication table.
+ *
+ * multi: int - used to store the result of the multiplication of num and j.
+ *
+ *columns: int - used as a counter for the number of cells printed on the current row of the
+ * multiplication table  to keep track of the remaining cells that need to be filled in.
+ *
+ */
+
+
+/*
+ * Test Plan:
+ *
+ * Normal Case:
+ * Does the output from my program match the output provided in Problem 1?
+ *
+ * Bad Case:
+ * Output does not match the provided output for problem 1.
+ *
+ */
+
+
+
 #include <iostream>
 
 int main() {
@@ -22,10 +65,12 @@ int main() {
         num = i;
         columns = 0; // Initialize column counter
         std::cout << i << "\t|\t"; // print row number
+
+        // Creating columns of table
         for ( j = 1; j <= 12; j++) {
             multi = num * j; // multiplying num * j
-
-            if (multi <= 9) {
+            // formatting the table
+            if (multi <= 9){
                 std::cout << multi << "\t|\t"; // printing values
             }
 
@@ -46,8 +91,5 @@ int main() {
         std::cout << std::endl; // new line to separate each row
     }
 
-
-
-
-
+    return 0;
 }
