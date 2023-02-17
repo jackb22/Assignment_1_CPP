@@ -1,24 +1,90 @@
-#include <iostream>
+/*
+ * Title: Problem_4.cpp
+ * Date: January 8th, 2023
+ * Author: Jack Bennett
+ * Version: 1.0
+ */
 
+/* Documentation
+ *
+ * Program Purpose: Create and interactive help system for C++ programming.
+ * Present information on: if statements, switch statements, for loops, while loops, and do-while loops.
+ *
+ * Classes: N/A
+ *
+ * Notes: N/A
+ *
+ * Variables:
+ * Input: Char -  Takes in user input and used to control switch statement
+ *
+ */
+
+
+/*
+ * Test Plan:
+ *
+ * Normal Case:
+ *  C++ Help Menu
+ *    Select Help on:
+ *     1. If
+ *     2. Switch
+ *     3. For
+ *     4. While
+ *     5. Do-while
+ *     x. Exit
+ *
+ *     Selection: 1
+ *
+ *     An if statement is used to test a condition and execute a block of code if the evaluation of the boolean expression is true.
+ *
+ *
+ *     C++ Help Menu
+ *     Select Help on:
+ *     1. If
+ *     2. Switch
+ *     3. For
+ *     4. While
+ *     5. Do-while
+ *     x. Exit
+ *
+ *     Selection: x
+ *
+ *    Thank you. Goodbye.
+ *
+ *
+ * Bad Case(User inputs a selection that is not an option):
+ *  C++ Help Menu
+ *   Select Help on:
+ *   1. If
+ *   2. Switch
+ *   3. For
+ *   4. While
+ *   5. Do-while
+ *   x. Exit
+ *
+ *   Selection: no
+ *
+ *   Invalid input.
+ *
+ *
+ *   Select Help on:
+ *   1. If
+ *   2. Switch
+ *   3. For
+ *   4. While
+ *   5. Do-while
+ *   x. Exit
+ *
+ *   Selection:
+ *
+ */
+
+
+#include <iostream>
 int main() {
 
-// declaring variables
-char input; // variable to hold user input
-
-
-// if statement
-// https://www.w3schools.com/cpp/cpp_conditions.asp
-//switch statement
-//https://www.w3schools.com/cpp/cpp_switch.asp
-// for loop
-// https://www.w3schools.com/cpp/cpp_for_loop.asp
-// while loop
-//https://www.w3schools.com/cpp/cpp_while_loop.asp
-// do while loop
-// https://www.w3schools.com/cpp/cpp_do_while_loop.asp
-
-
-
+//declaring variables
+char Input; // variable to hold user input
 
 
 
@@ -38,13 +104,13 @@ char input; // variable to hold user input
 
         // taking input from user
         std::cout <<"Selection: ";
-        std::cin>>input;
+        std::cin>>Input;
 
         //Switch statement to handle output
-        switch(input){
+        switch(Input){
         case '1':
             std::cout<<std::endl;
-            std::cout<<"A if statement is used to test a condition and execute a block of code if the evaluation of the boolean expression is true."<<std::endl;
+            std::cout<<"An if statement is used to test a condition and execute a block of code if the evaluation of the boolean expression is true."<<std::endl;
             std::cout<<std::endl;
             break;
         case '2':
@@ -84,7 +150,8 @@ char input; // variable to hold user input
             std::cout<<"Invalid input."<<std::endl;
             break;
     }
-    }while(input != 'x'); // loop will continue until user enters 'x' to exit
+    }while(Input != 'x'); // loop will continue until user enters 'x' to exit
 
+    return 0;
 }
 
